@@ -1,4 +1,15 @@
-<header>
-  <button (click)="auth.login('/notes')" *ngIf="!auth.loggedIn">Log In</button>
-  <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
-</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1 mr-auto">Stackprint Notes</span>
+  <ul class="navbar-nav">
+    <li class="nav-item" *ngIf="!auth.loggedIn">
+      <a class="nav-link" (click)="auth.login('/notes')">
+        Log In
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="auth.loggedIn">
+      <a class="nav-link" (click)="auth.logout()">
+        Log Out
+      </a>
+    </li>
+  </ul>
+</nav>

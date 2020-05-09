@@ -1,12 +1,24 @@
-<h2>Create a note</h2>
-<input type="text" #noteInput />
-<button (click)="createNote()">Submit</button>
-
-<h2>My notes</h2>
-<div *ngIf="notes$ | async as notes; else loading">
-  <div *ngFor="let note of notes">
-    <span>{{ note.text }}</span>
-    <button (click)="deleteNote(note.id)">Delete</button>
+<div class="w-50">
+  <h3>Create a note</h3>
+  <div class="form-group">
+    <input class="form-control" type="text" #noteInput />
+  </div>
+  <button class="btn btn-primary" (click)="createNote()">Submit</button>
+</div>
+<div class="mt-4 w-50">
+  <h3>My notes</h3>
+  <div *ngIf="notes$ | async as notes; else loading">
+    <div *ngFor="let note of notes" class="card my-2">
+      <div class="card-body d-flex">
+        <div class="flex-fill">{{ note.text }}</div>
+        <div>
+          <button class="btn btn-sm btn-danger" (click)="deleteNote(note.id)">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 <ng-template #loading>Loading notes...</ng-template>
