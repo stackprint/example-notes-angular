@@ -10,4 +10,6 @@ npm install
 npm start
 ```
 
+## Screenshot
+
 ![Notes app interface](screenshots/notes.png)
