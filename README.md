@@ -2,7 +2,7 @@
 
 ## Setup
 
-- Adapt the Auth0 configuration in `src/app/environments/environment.ts
+- Adapt the Auth0 configuration in `src/app/environments/environment.ts`
 - Run:
 
 ```
