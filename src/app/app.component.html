@@ -1,0 +1,5 @@
+<div *ngIf="notes$ | async as notes; else loading">
+  <pre>{{ notes | json }}</pre>
+</div>
+
+<ng-template #loading>Loading...</ng-template>
