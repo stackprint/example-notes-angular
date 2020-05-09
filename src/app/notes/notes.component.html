@@ -1,0 +1,12 @@
+<h2>Create a note</h2>
+<input type="text" #noteInput />
+<button (click)="createNote()">Submit</button>
+
+<h2>My notes</h2>
+<div *ngIf="notes$ | async as notes; else loading">
+  <div *ngFor="let note of notes">
+    <span>{{ note.text }}</span>
+    <button (click)="deleteNote(note.id)">Delete</button>
+  </div>
+</div>
+<ng-template #loading>Loading notes...</ng-template>

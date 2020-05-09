@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  auth0: {
+    domain: "<auth0 account url, e.g. stackprint-examples.eu.auth0.com>",
+    clientId: "<auth0 application client id>",
+    audience: "<stackprint project base url>"
+  }
 };
 
 /*

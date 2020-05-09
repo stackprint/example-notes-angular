@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "@auth0/auth0-spa-js": "^1.8.1",
     "dist": "file:modules/typescript-angular-client/dist-0.1.2.tgz",
     "rxjs": "~6.5.4",
     "stackprint-api": "file:modules/typescript-angular-client/dist/stackprint-api-1.0.0.tgz",

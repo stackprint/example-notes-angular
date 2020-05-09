@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { NoteService, Note } from 'stackprint-api';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +6,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  notes$: Observable<Note[]>
-
-  constructor(private noteService: NoteService) {
+  constructor() {
   }
-
-  ngOnInit() {
-    this.notes$ = this.noteService.notesGet()
-  }
-
 }
