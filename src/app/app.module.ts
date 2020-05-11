@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http'
-import { ApiModule } from 'stackprint-api';
+import { ApiModule } from 'gen/typescript-angular-client';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NotesComponent } from './notes/notes.component';
 

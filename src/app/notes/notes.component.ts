@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { NoteService, Note, NoteParams } from 'stackprint-api';
 import { Observable } from 'rxjs';
+import { Note, NoteService, NoteParams } from 'gen/typescript-angular-client';
 
 @Component({
   selector: 'app-notes',
@@ -19,19 +19,19 @@ export class NotesComponent implements OnInit {
   }
 
   private loadNotes() {
-    this.notes$ = this.noteService.notesGet()
+    this.notes$ = this.noteService.listNotes()
   }
 
   createNote() {
     const params: NoteParams = {
       text: this.noteInput.nativeElement.value
     }
-    this.noteService.notesPost(params)
+    this.noteService.createNote(params)
       .subscribe(() => this.loadNotes())
   }
 
   deleteNote(id: string) {
-    this.noteService.notesIdDelete(id)
+    this.noteService.deleteNote(id)
       .subscribe(() => this.loadNotes())
   }
 

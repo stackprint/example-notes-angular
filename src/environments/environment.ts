@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   auth0: {
-    domain: "<auth0 account url, e.g. stackprint-examples.eu.auth0.com>",
-    clientId: "<auth0 application client id>",
-    audience: "<stackprint project base url>"
+    domain: "stackprint-examples.eu.auth0.com",
+    clientId: "3R39Cx38j7DvMqgM5HsA6Ug5p6Ki2CMg",
+    audience: "https://p-dev.stackprint.io/stackprint-notes"
   }
 };
 
