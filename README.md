@@ -6,6 +6,7 @@ The app connects to a Stackprint API using fully typed [generated client code](m
 
 ## Setup
 
+- Replace the generated client code in `src/gen-typescript-angular-client` with the client code generated for your Stackprint project
 - Adapt the Auth0 configuration in `src/app/environments/environment.ts`
 - Run:
 
